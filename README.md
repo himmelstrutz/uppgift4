@@ -1,4 +1,4 @@
-# uppgift4
+# Uppgift 4
 ## Prototyping that looks real
 Sista tidpunkt för inlämning: 15 jan 2021 23:55, 30 dagar kvar 
 
