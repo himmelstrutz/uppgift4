@@ -292,7 +292,7 @@ button:focus {
     padding: 40px 30px 10px 30px;
     width: 50%;
 }
-.card #card2{
+.card2{
   width: 50%;
     display: flex;
     align-items: center;
@@ -372,7 +372,7 @@ button:focus {
     font-size: 15px
 }
 
-#localdata{
+ #localdata{
   margin-right:11px !important;
   margin-left:11px !important;
 
