@@ -372,9 +372,9 @@ button:focus {
     font-size: 15px
 }
 
-#localdata, #localdata1{
-  margin-right:11px;
-  margin-left:11px;
+#localdata{
+  margin-right:11px !important;
+  margin-left:11px !important;
 
   }
 
