@@ -46,11 +46,28 @@ h6 {
   background-color: #A6B579;
   border-radius: 25px;
   margin-bottom: 5%;
+  margin-top:11px;
+  border-color: #606C3B;
 }
+
+#sign_in_button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #A6B579 !important;
+    outline-width: 0;
+    font-weight: 400
+}
+
+#sign_in_button:hover {
+    background-color: #606C3B;
+}
+
 #register_button {
   background-color: #DF8063;
   border-radius: 25px;
   margin-bottom: 25%;
+  display:none;
 }
 #sign_in_text {
   color: #7A7A7A;
@@ -66,7 +83,7 @@ h6 {
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -81,20 +98,31 @@ h6 {
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="tel"] {
+.form-signin input[type="text"] {
   margin-bottom: 5px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-radius: 25px;
-  box-shadow: 2px 2px 6px 0px #dbd7d7 inset;
+ /*box-shadow: 2px 2px 6px 0px #dbd7d7 inset; */
 }
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-radius: 25px;
-  box-shadow: 2px 2px 6px 0px #dbd7d7 inset;
+  /*box-shadow: 2px 2px 6px 0px #dbd7d7 inset; */
 }
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #A6B579 !important;
+    outline-width: 0;
+    font-weight: 400
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -107,7 +135,7 @@ h6 {
   font-style: bold;
   text-align: center;
 }
-/*stretches width to move profile right */
+/*stretches width rightto move profile right */
 
 #navbarSupportedContent ul {
   display: flex;
@@ -203,10 +231,10 @@ footer>div {
   border-top-right-radius: calc(.3rem - 1px);
 }
 .form-group {
-  padding-left: 11px;
-  padding-right: 11px;
-  margin-left: 11px;
-  margin-right: 11px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .icon-heading {
   display: inline-block;
@@ -225,4 +253,159 @@ footer>div {
   right: 0;
   left: 0; 
   z-index: 20;
+}
+
+/* Login checkin style */
+#passStatus {
+  margin-top:11px;
+  margin-bottom:21px;
+  color:#333333;
+  text-align: center;
+  margin-left:11px;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 0!important;
+}
+
+.text-muted {
+    color: #606C3B!important;
+    margin-left:11px;
+}
+
+/* Login styles */
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.card {
+    border-radius: 0;
+    border: none
+    
+}
+
+.card1 {
+    width: 50%;
+    padding: 40px 30px 10px 30px;
+    width: 50%;
+}
+.card #card2{
+  width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB7A0;
+
+}
+
+
+
+
+
+.heading {
+    /*margin-bottom: 60px !important*/
+}
+
+::placeholder {
+    color: #6c757d !important;
+    opacity: 1;
+    font-style:italic;
+}
+
+:-ms-input-placeholder {
+    color: #6c757d !important;
+    font-style:italic;
+}
+
+::-ms-input-placeholder {
+    color: #6c757d !important;
+    font-style:italic;
+}
+
+
+
+.msg-info {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #D500F9, #FFD54F)
+}
+
+.btn-white {
+    border-radius: 50px;
+    color: #606C3B;
+    background-color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    border: 2px solid #A6B579 !important
+}
+
+.btn-white:hover {
+    color: #ffffff;
+    background-color: #606C3B;
+}
+
+
+
+.bottom {
+    width: 100%;
+    margin-top: 1px !important
+}
+
+.sm-text {
+    font-size: 15px
+}
+
+#localdata{
+  margin-right:11px;
+  margin-left:11px;
+
+  }
+
+
+@media screen and (max-width: 992px) {
+    .card1 {
+        width: 100%;
+        padding: 40px 30px 10px 30px
+    }
+
+    .card2 {
+        width: 100%
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card2 {
+        padding: 50px
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important
+    }
 }
