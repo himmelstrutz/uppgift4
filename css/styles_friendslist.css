@@ -11,6 +11,12 @@ html, body {
   font-family: "Roboto";
   background-color: #FFF9F8;
 }
+
+#localdata{
+  margin-right:11px !important;
+  margin-left:11px !important;
+
+  }
 /* Chat page*/
 
 #logo {
@@ -81,6 +87,12 @@ html, body {
 
 .nav-link:active {
   color: #000000 !important;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 5px 6px -6px #999;
+    -moz-box-shadow: 0 5px 6px -6px #999;
+    box-shadow: 0 5px 6px -6px #999;
 }
 
 .card {
@@ -217,6 +229,9 @@ html, body {
   bottom: 0;
   position: absolute;
   width: 100%;
+  border-top-width: 1px;
+  border-top-color: #DF8063;
+  border-top-style: solid;
 }
 .popup-messages-footer .btn-footer {
   overflow: hidden;

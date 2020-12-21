@@ -32,6 +32,116 @@
 	               });
 	     })
 	</script>
+	<script>
+		function postChat() {
+	// create a P tag to become the post
+	let userPost = document.createElement( "P" );
+	// Get the "userInput" from the form 
+	let userContent = document.getElementById( "userInput" ).value;
+	
+	//set the userInput as content
+	let userText = document.createTextNode( userContent );
+	
+	// add that text to the P tag
+	userPost.appendChild( userText );
+	// give the P tag a class 
+	userPost.classList.add( "userPost" );
+	
+	// get the chatWindow and add the Post to it
+	document.getElementById( "chatWindow" ).appendChild( userPost );
+	
+	
+	
+	// you can call a function with a timer
+	// this calls the function after 4 sec.
+	setTimeout( botAnswer, 4000 );
+	// this calls the function every 4 sec.
+	//setInterval(botAnswer, 4000);
+}
+
+function botAnswer() {
+	// create a P tag to become the post
+	let botPost = document.createElement( "P" );
+	
+	// make an array with some text in
+	let aArray = [ "Apples", "Bananas", "Pears" ];
+	
+	// Math.floor rounds a number down, 1.6 become 1.
+	// Math.random outputs a random value between 0 and 1
+	let randomNumber= Math.floor( Math.random() * aArray.length )
+	
+	//use the randomNumber to pick an random text from the array
+	let randomText = aArray[randomNumber];
+	
+	//set the text as content
+	let botText = document.createTextNode( randomText );
+	// add that text to the P tag
+	botPost.appendChild( botText );
+	// give the P tag a class for the bot
+	botPost.classList.add( "botPost" );
+	
+	// get the chatWindow and add the Post to it
+	document.getElementById( "chatWindow" ).appendChild( botPost );
+}
+	</script>
+	<style>
+#chatbox{
+		    background: #FFFFFFF none repeat scroll 0 0;
+    /* height: 275px; */
+    overflow: auto;
+    
+    
+}
+
+#chatWindow{
+		    background: #FFFFFF;
+    /* height: 275px; */
+    overflow: auto;
+    
+     
+}
+		
+		p.userPost {
+    width: 75%;
+    background: #FEFAE1 none repeat scroll 0 0;
+    border: 1px solid #FEFAE1;
+    border-radius: 15px;
+    color: #1f2121;
+    margin: 5px 11px 5px 5px;
+    padding: 5px 10px;
+    position: relative;
+    float: right;
+}
+
+
+p.botPost {
+    border: 1px solid #FEFAE1;
+    background: #A6B579 none repeat scroll 0 0;
+    width: 75%;
+    margin: 5px 0 5px 11px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color:#FFFFFF;
+    float:left;
+}
+
+.input {
+    /*width: 250px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+
+	</style>
 	<title>Mina vänner</title>
 </head>
 <body>
@@ -61,7 +171,7 @@
 					<div class="float right" id="profil">
 						<ul class="navbar-nav">
 							<li class="nav-item dropdown">
-								<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button"><img alt="meddelanden" height="30" src="img/mail.png" width="40"> <span id="localdata">user </span> <img alt="profilbild" height="50" src="img/GenericUser.png" width="50" class="rounded-circle"></a>
+								<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdown" role="button"><img alt="meddelanden" height="36" width="36" src="img/mail.png" width="40"> <span id="localdata">user </span> <img alt="profilbild" height="50" src="img/GenericUser.png" width="50" class="rounded-circle"></a>
 								<div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="profile.html">Min Profil</a> <a class="dropdown-item" href="#">Säkerhet</a> <a class="dropdown-item" href="#">Inställningar</a>
 									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Logga ut</a>
@@ -181,53 +291,17 @@
 			</div>
 		</div>
 		<div class="popup-messages">
-			<div class="direct-chat-messages">
-				<div class="chat-box-single-line">
-					<abbr class="timestamp">8 oktober,2020</abbr>
-				</div><!-- Message. Default to the left -->
-				<div class="direct-chat-msg doted-border">
-					<div class="direct-chat-info clearfix">
-						<span class="direct-chat-name pull-left">Jag</span>
-					</div><!-- /.direct-chat-info -->
-					<img alt="message user image" class="direct-chat-img" src="img/GenericUser.png"><!-- /.direct-chat-img -->
-					<div class="direct-chat-text">
-						Hallå din gamle get! Hur är det med dig ?
-					</div>
-					<div class="direct-chat-info clearfix">
-						<span class="direct-chat-timestamp pull-right">3.36 PM</span>
-					</div>
-					<div class="direct-chat-info clearfix">
-						<span class="direct-chat-img-reply-small pull-left"></span> <span class="direct-chat-reply-name">Kurt Nyberg</span>
-					</div>
-					<img alt="message user image" class="direct-chat-img" src="img/GenericUser2.png">
-					<div class="direct-chat-text">
-						Jodå, tackar som frågar. Hur är det själv?
-					</div><!-- /.direct-chat-text -->
-				</div><!-- /.direct-chat-msg -->
-				<div class="chat-box-single-line">
-					<abbr class="timestamp">8 oktober,2020</abbr>
-				</div><!-- Message. Default to the left -->
-				<div class="direct-chat-msg doted-border">
-					<div class="direct-chat-info clearfix">
-						<span class="direct-chat-name pull-left">Jag</span>
-					</div><!-- /.direct-chat-info -->
-					<img alt="iamgurdeeposahan" class="direct-chat-img" src="img/GenericUser.png"><!-- /.direct-chat-img -->
-					<div class="direct-chat-text">
-						Ska vi gå ut och ta en fika nån dag?
-					</div>
-					<div class="direct-chat-info clearfix">
-						<span class="direct-chat-timestamp pull-right">3.36 PM</span>
-					</div>
-					<div class="direct-chat-info clearfix">
-						<img alt="iamgurdeeposahan" class="direct-chat-img big-round" src="img/GenericUser2.png"> <span class="direct-chat-reply-name">Kurt Nyberg</span>
-					</div><!-- /.direct-chat-text -->
-				</div><!-- /.direct-chat-msg -->
-			</div>
+			<div id="chatbox">					
+<div id="chatWindow"></div>
+</div>
 		</div>
 		<div class="popup-messages-footer">
-			<textarea cols="40" id="status_message" name="message" placeholder="Skriv ett meddelande..." rows="10"></textarea>
+			
+			<textarea cols="40" id="userInput" name="message" placeholder="Skriv ett meddelande..." rows="10"></textarea>
 			<div class="btn-footer">
-				<button class="bg_none"><i aria-hidden="true" class="fa fa-film"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-camera"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-paperclip"></i></button> <button class="bg_none pull-right"><i aria-hidden="true" class="fa fa-thumbs-o-up"></i></button>
+				<button class="bg_none"><i aria-hidden="true" class="fa fa-film"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-camera"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-paperclip"></i></button> 
+                 <button type="button"  onclick="postChat()" class="bg_none pull-right"><i aria-hidden="true" class="fa fa-paper-plane"></i></button>
+				
 			</div>
 		</div>
 	</div><!-- Bootstrap core JavaScript -->

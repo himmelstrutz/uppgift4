@@ -1,15 +1,22 @@
 /* Styles for Smells Like Team Spirit © 2020 */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
 * {
-	margin: 0;
-	padding: 0;
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  font-family: "Roboto";
+  background-color: #FFF9F8;
 }
 
-html,
-body {
-  height: 100%;
-}
+#localdata{
+  margin-right:11px !important;
+  margin-left:11px !important;
+
+  }
 
 .layerbackground_1 {
   background-color: #FFB7A0;
@@ -130,13 +137,13 @@ padding-right: 30%;
   }
 
   /*stretches width to move profile right */
-#navbarSupportedContent ul {
+/*#navbarSupportedContent ul {
   display: flex;
   margin: 0;
   padding: 0;
   width: 100%;
   list-style-type: none;
-}
+}*/
 
 .navbar {
     -webkit-box-shadow: 0 5px 6px -6px #999;
@@ -144,20 +151,18 @@ padding-right: 30%;
     box-shadow: 0 5px 6px -6px #999;
 }
 
-.navbarSupportedContent {
-	max-height: 50px;
-}
- /*displays profile right in navbar*/
-#profil {
-	width: 300px;
-}
+/*.navbarSupportedContent {
+  max-height: 50px;
+}*/
+
+ 
 
 #menulink {
   color: #9B8080;
 }
 
 .navbarDropdown.nav-link.dropdown-toggle{
-	color:green;
+  color:green;
 }
 
 .dropdown-toggle::after {
