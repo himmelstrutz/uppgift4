@@ -461,6 +461,13 @@ html, body {
   z-index: 1000;
 }
 
+#typingImg{
+  
+  display:none;
+  margin-left:7px;
+  z-index: 1000;
+}
+
 p.userPost::after {
  content: '';
   background:url('../img/GenericUser.png');
@@ -626,7 +633,7 @@ footer>div {
   z-index: 20;
 }
 
-#typingImg {
+/*#typingImg {
 display:none;
 content: '';
   background:url('../img/tenor.gif');
@@ -637,7 +644,7 @@ content: '';
   background-repeat: no-repeat;
   margin-left:-36px;
 
-}
+}*/
 
 
 

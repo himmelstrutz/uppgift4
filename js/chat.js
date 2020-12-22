@@ -50,7 +50,8 @@ function postChat() {
     //document.getElementById('chatWindow').appendChild(img);
 	
 	
-	setTimeout("document.getElementById('typingText').style.display = 'block'", 2000);
+	//setTimeout("document.getElementById('typingText').style.display = 'block'", 2000);
+	setTimeout("document.getElementById('typingImg').style.display = 'block'", 2000);
 
 
 
@@ -68,7 +69,8 @@ function botAnswer() {
 
 	//calls the fetchData function here
 	fetchData();
-	document.getElementById('typingText').style.display = "none";
+	//document.getElementById('typingText').style.display = "none";
+	document.getElementById('typingImg').style.display = "none";
 
 }
 
