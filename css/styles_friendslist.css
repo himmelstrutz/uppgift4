@@ -184,6 +184,9 @@ html, body {
   padding: 7px 10px;
   width: 100%;
   font-family: Oswald;
+  border-bottom-width: 1px;
+  border-bottom-color: #DF8063;
+  border-bottom-style: solid;
 }
 .bg_none i {
   border: 1px solid #DF8063;
@@ -426,6 +429,118 @@ html, body {
   padding: 5px 10px;
   position: relative;
 }
+
+/* Newer styles */
+
+#chatbox{
+        background: #FFFFFFF none repeat scroll 0 0;
+    height: 380px; 
+    overflow: auto;
+
+    
+    
+}
+
+#chatWindow{
+        background: #FFFFFF;
+    height: 380px; 
+    overflow: auto;
+       position: relative; 
+    
+     
+}
+
+#typingText{
+  position: -webkit-sticky; /* Safari */
+  position: sticky; 
+  bottom: 0; 
+  left: 0;
+  font-style: italic;
+  display:none;
+  margin-left:7px;
+  z-index: 1000;
+}
+
+p.userPost::after {
+ content: '';
+  background:url('../img/GenericUser.png');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px; 
+  background-repeat: no-repeat;
+  margin-right:-36px;
+   float: right;
+}
+    
+    p.userPost {
+    width: 75%;
+    background: #FEFAE1 none repeat scroll 0 0;
+    border: 1px solid #FEFAE1;
+    border-radius: 15px;
+    color: #1f2121;
+    margin: 5px 31px 5px 5px;
+    padding: 5px 10px;
+    position: relative;
+    float: right;
+}
+p.botPost::before {
+ content: '';
+  background:url('../img/GenericUser2.png');
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-size: 24px 24px; 
+  background-repeat: no-repeat;
+  margin-left:-36px;
+}
+
+/*p.botPost:after{
+  content: '';
+  background:url('../img/GenericUser2.png');
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-size: 24px 24px; 
+  background-repeat: no-repeat;
+}*/
+
+p.botPost {
+    border: 1px solid #FEFAE1;
+    background: #A6B579 none repeat scroll 0 0;
+    width: 75%;
+    margin: 5px 0 5px 31px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color:#FFFFFF;
+    float:left;
+}
+
+p.botPost::after{
+  margin-left:28px;
+}
+
+p.botPost text {
+margin-left:28px;
+  }
+
+
+.input {
+    /*width: 250px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+
+
 /* End */
 
 /* font-awesome icons */
@@ -511,6 +626,18 @@ footer>div {
   z-index: 20;
 }
 
+#typingImg {
+display:none;
+content: '';
+  background:url('../img/tenor.gif');
+  width: 48px;
+  height: 31px;
+  position: absolute;
+  background-size: 48px 31px; 
+  background-repeat: no-repeat;
+  margin-left:-36px;
+
+}
 
 
 
