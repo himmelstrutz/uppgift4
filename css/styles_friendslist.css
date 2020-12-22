@@ -226,6 +226,7 @@ html, body {
   padding: 5px !important;
   border: medium none;
   width: 95% !important;
+
 }
 .popup-messages-footer {
   background: #fff none repeat scroll 0 0;
@@ -646,5 +647,27 @@ content: '';
 
 }*/
 
+textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color: #123456;
+font-style:italic;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #123456;
+opacity: 1;
+font-style:italic;
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #123456;
+opacity: 1;
+font-style:italic;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: #123456;
+font-style:italic;
+}
+textarea:placeholder-shown { /* Standard Pseudo-class */
+color: #123456;
+font-style:italic;
+}
 
 
