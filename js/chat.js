@@ -1,13 +1,13 @@
 //https://stackoverflow.com/questions/18614301/keep-overflow-div-scrolled-to-bottom-unless-user-scrolls-up
  
-// scroll to bottom 
+// scroll to bottom function
 
 function updateScroll(){
     var element = document.getElementById("chatWindow");
     element.scrollTop = element.scrollHeight;
 }
 
-// https://stackoverflow.com/questions/5451445/how-to-display-image-with-javascript
+// https://stackoverflow.com/questions/5451445/how-to-display-image-with-javascript (showing animated 'typing' gif)
 function show_image(src, width, height, alt) {
     var img = document.createElement("img");
     img.src = "./img/tenor.gif";
@@ -21,7 +21,6 @@ function show_image(src, width, height, alt) {
 }
 
 
-
 function postChat() {
 
 	
@@ -29,30 +28,22 @@ function postChat() {
 	let userPost = document.createElement( "P" );
 	// Get the "userInput" from the form 
 	let userContent = document.getElementById( "userInput" ).value;
+
 	
 	//set the userInput as content
 	let userText = document.createTextNode( userContent );
 	
 	// add that text to the P tag
-	userPost.appendChild( userText );
+	userPost.appendChild( userText  );
 	// give the P tag a class 
 	userPost.classList.add( "userPost" );
 	
 	// get the chatWindow and add the Post to it
 	document.getElementById( "chatWindow" ).appendChild( userPost );
 
-	//const img = document.createElement('img')
-//img.src = "./img/tenor.gif";
-    //img.width = "48";
-    //img.height = "31";
-    //img.alt = "writing";
-
-    //document.getElementById('chatWindow').appendChild(img);
 	
-	
-	//setTimeout("document.getElementById('typingText').style.display = 'block'", 2000);
+	//showing the animated gif 2 sec after first message is sent
 	setTimeout("document.getElementById('typingImg').style.display = 'block'", 2000);
-
 
 
 	// you can call a function with a timer
@@ -60,21 +51,16 @@ function postChat() {
 	setTimeout( botAnswer, 4000 );
 	setInterval(updateScroll,100);
 	
-	// this calls the function every 4 sec.
-	//setInterval(botAnswer, 4000);
+	
 }
 
 function botAnswer() {
-
-
 	//calls the fetchData function here
 	fetchData();
-	//document.getElementById('typingText').style.display = "none";
+	//GIF should not be visible here
 	document.getElementById('typingImg').style.display = "none";
 
 }
-
-
 
 
 // this API has lorem ipsum text, but with meat and puns
@@ -136,7 +122,7 @@ function useTheData(data) {
   
 }
 
-//show typing gif
+
 
 
 

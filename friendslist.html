@@ -21,7 +21,9 @@
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
 	</script>
+	<script src="js/chat.js"></script>
 	<script>
+		// calling the chat window
 	      $(function(){
 	    $("#addClass ,#addClass2, #addClass3, #addClass4, #addClass5, #addClass6").click(function () {
 	             $('#qnimate').addClass('popup-box-on');
@@ -31,17 +33,32 @@
 	             $('#qnimate').removeClass('popup-box-on');
 	               });
 	     })
-	</script>
-	<script src="js/chat.js"></script>
-	<script>
-function clearArea(){
-     document.getElementById('userInput').value = "";
-};
-	
-	</script>
-	<style>
 
-	</style>
+
+//send message with enter key
+//https://www.formget.com/submit-data-from-textarea-on-enter-key/
+
+$(document).ready(function() {
+$('#userInput').keydown(function() {
+var message = $("textarea").val();
+if (event.keyCode == 13) {
+if (message == "") {
+alert("Please, enter chat message");
+} else {
+postChat();
+//alert("Succesfully submitted:- " + message);
+}
+$("textarea").val('');
+return false;
+}
+});
+});
+
+
+</script>
+	
+	
+	
 	
 	<title>Mina vänner</title>
 </head>
@@ -200,13 +217,17 @@ function clearArea(){
 		</div>
 		<div class="popup-messages-footer">
 			<!--<div id="typingText">Gösta skriver... </div>-->
+			
 			<div id="typingImg"><span><img src="img/tenor.gif" width="32" height="22" style="margin-right:7px;" >Gösta skriver...</span></div>
-			<textarea cols="40" id="userInput" name="message" placeholder="Skriv ett meddelande..." rows="10" ></textarea>
+			<textarea cols="40" id="userInput" name="message" placeholder="Skriv ett meddelande..." rows="10" autofocus ></textarea>
 			<div class="btn-footer">
 				<button class="bg_none"><i aria-hidden="true" class="fa fa-film"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-camera"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-paperclip"></i></button> 
-                 <button type="button" onclick="postChat();clearArea();" class="bg_none pull-right"><i aria-hidden="true" class="fa fa-paper-plane"></i></button>
+                <button type="submit" onclick="postChat();clearArea();" class="bg_none pull-right" id="messageBtn" ><i aria-hidden="true" class="fa fa-paper-plane"></i></button>
+
 				
 			</div>
+		
+		
 		</div>
 	</div><!-- Bootstrap core JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
@@ -214,7 +235,7 @@ function clearArea(){
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 	</script>
 	<script>
-//displaying the value from local storage to another page by their respective Ids
+//displaying the value from local storage to another page by their respective Ids. https://www.csestack.org/javascript-localstorage-pass-data-web-page/
 document.getElementById("localdata").innerHTML=localStorage.getItem("txtValue");
 
 </script>
