@@ -30,6 +30,8 @@
 	         $(function(){
 	       $("#addClass ,#addClass2, #addClass3, #addClass4, #addClass5, #addClass6").click(function () {
 	                $('#qnimate').addClass('popup-box-on');
+//focus on the textarea
+	              document.getElementById('userInput').focus();
 	                  });
 	                
 	                  $("#removeClass").click(function () {
@@ -107,7 +109,7 @@
 						<p class="card-text">Aged BoBo, Bohemian Borgeouise.</p>
 					</div>
 					<div class="btn-group">
-						<button class="btn btn-sm btn-outline-secondary" id="option_button" type="button"><i aria-hidden="true" class="fa fa-phone"></i>&nbsp;Ring</button> <button class="btn btn-sm btn-outline-secondary" id="addClass" type="button"><i aria-hidden="true" class="fa fa-comments"></i>&nbsp;Chatta</button> <button class="btn btn-sm btn-outline-secondary" id="option_button" type="button"><i aria-hidden="true" class="fa fa-user"></i>&nbsp;Se profil</button>
+						<button class="btn btn-sm btn-outline-secondary" id="option_button" type="button"><i aria-hidden="true" class="fa fa-phone"></i>&nbsp;Ring</button> <button class="btn btn-sm btn-outline-secondary" id="addClass" type="button"><i aria-hidden="true" class="fa fa-comments" ></i>&nbsp;Chatta</button> <button class="btn btn-sm btn-outline-secondary" id="option_button" type="button"><i aria-hidden="true" class="fa fa-user"></i>&nbsp;Se profil</button>
 					</div>
 				</div>
 				<div class="card">
@@ -214,7 +216,7 @@
 			<div id="typingImg">
 				<span><img height="22" src="img/tenor.gif" style="margin-right:7px;" width="32">Gösta skriver...</span>
 			</div>
-			<textarea autofocus="" cols="40" id="userInput" name="message" placeholder="Skriv ett meddelande..." rows="10"></textarea>
+			<textarea cols="40" id="userInput" name="message" placeholder="Skriv ett meddelande..." rows="10" autofocus ></textarea>
 			<div class="btn-footer">
 				<button class="bg_none"><i aria-hidden="true" class="fa fa-film"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-camera"></i></button> <button class="bg_none"><i aria-hidden="true" class="fa fa-paperclip"></i></button> <button class="bg_none pull-right" id="messageBtn" onclick="postChat();clearArea();" type="submit"><i aria-hidden="true" class="fa fa-paper-plane"></i></button>
 			</div>
