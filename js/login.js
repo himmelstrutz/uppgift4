@@ -21,7 +21,7 @@ function checkPass() {
 			var attemptsLeft = 4 - passCount;
 
 			//inform the user of how its going for them
-			document.getElementById("passStatus").innerHTML = "You have " + attemptsLeft + " attempts left!";
+			document.getElementById("passStatus").innerHTML = "Du har " + attemptsLeft + " försök kvar!";
 			
 
 			// update the count for each failed password check
@@ -37,7 +37,7 @@ function checkPass() {
 	} else {
 		// if the user is above the max changes for the password check they are locked out
 		//inform the user of how its going for them
-		document.getElementById("passStatus").innerHTML = "NO LOGIN FOR YOU!";
+		document.getElementById("passStatus").innerHTML = "Du har inte behörighet att logga in!";
 		
 		// and also make it red
 		document.getElementById("passStatus").style.color = "red";
