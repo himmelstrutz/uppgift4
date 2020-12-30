@@ -1,80 +1,71 @@
 //https://stackoverflow.com/questions/18614301/keep-overflow-div-scrolled-to-bottom-unless-user-scrolls-up
- 
-// scroll to bottom function
-
-function updateScroll(){
-    var element = document.getElementById("chatWindow");
-    element.scrollTop = element.scrollHeight;
+// scroll to bottom 
+function updateScroll() {
+	var element = document.getElementById("chatWindow");
+	element.scrollTop = element.scrollHeight;
 }
-
-// https://stackoverflow.com/questions/5451445/how-to-display-image-with-javascript (showing animated 'typing' gif)
+// https://stackoverflow.com/questions/5451445/how-to-display-image-with-javascript
 function show_image(src, width, height, alt) {
-    var img = document.createElement("img");
-    img.src = "./img/tenor.gif";
-    img.width = "48";
-    img.height = "31";
-    img.alt = "writing";
-
-    // This next line will just add it to the <body> tag
-    document.body.appendChild(img);
-    console.log(img);
+	var img = document.createElement("img");
+	img.src = "./img/tenor.gif";
+	img.width = "48";
+	img.height = "31";
+	img.alt = "writing";
+	// This next line will just add it to the <body> tag
+	document.body.appendChild(img);
+	console.log(img);
 }
-
 
 function postChat() {
-
-	
 	// create a P tag to become the post
-	let userPost = document.createElement( "P" );
+	let userPost = document.createElement("P");
+	// create span that contains time
+	var span = document.createElement('span');
 	// Get the "userInput" from the form 
-	let userContent = document.getElementById( "userInput" ).value;
-
-	
+	let userContent = document.getElementById("userInput").value;
+	// get the time
+	let today = new Date();
+	//let time = today.getHours() + ":" + today.getMinutes()  ;
+	let time = ('0' + today.getHours()).slice(-2) + ":" + ('0' + today.getMinutes()).slice(-2);
 	//set the userInput as content
-	let userText = document.createTextNode( userContent );
-	
+	let userText = document.createTextNode(userContent);
+	//set the time text and style
+	span.appendChild(document.createTextNode(time));
+	span.style.fontSize = '10px';
+	span.style.fontColor = '#666666';
+	//date
+	userPost.appendChild(span);
+	// line break 
+	userPost.appendChild(document.createElement("br"));
 	// add that text to the P tag
-	userPost.appendChild( userText  );
+	userPost.appendChild(userText);
 	// give the P tag a class 
-	userPost.classList.add( "userPost" );
-	
+	userPost.classList.add("userPost");
 	// get the chatWindow and add the Post to it
-	document.getElementById( "chatWindow" ).appendChild( userPost );
-
-	
-	//showing the animated gif 2 sec after first message is sent
+	document.getElementById("chatWindow").appendChild(userPost);
+	//display typing gif
 	setTimeout("document.getElementById('typingImg').style.display = 'block'", 2000);
-
-
 	// you can call a function with a timer
 	// this calls the function after 4 sec.
-	setTimeout( botAnswer, 4000 );
-	setInterval(updateScroll,100);
-	
-	
+	setTimeout(botAnswer, 4000);
+	setInterval(updateScroll, 100);
+	// this calls the function every 4 sec.
+	//setInterval(botAnswer, 4000);
 }
 
 function botAnswer() {
 	//calls the fetchData function here
 	fetchData();
-	//GIF should not be visible here
+	//document.getElementById('typingText').style.display = "none";
 	document.getElementById('typingImg').style.display = "none";
-
 }
-
-
 // this API has lorem ipsum text, but with meat and puns
 //const fetchUrl = "https://baconipsum.com/api/?type=meat-and-filler";
 const fetchUrl = "https://baconipsum.com/api/?type=all-meat&sentences=1&start-with-lorem=1";
 
-
-
-function fetchData(){
+function fetchData() {
 	fetch(fetchUrl).then(response => response.json()).then(data => useTheData(data));
-	
 }
-
-
 // This is just a normal function that has an argument 
 function useTheData(data) {
 	// lets print the data we just sent here.
@@ -91,39 +82,33 @@ function useTheData(data) {
 	__proto__: Array(0)
 	
 	*/
-	
 	// its an Array so lets try and get one of then out
 	console.log(data[0]);
-	
 	//going to be lazy and just use one of them
-	
 	//pretty much the same code as the first bot had
-	
-
 	// create a P tag to become the post
-	let botPost = document.createElement( "P" );
-	
-	
+	let botPost = document.createElement("P");
+	// create span that contains time
+	var span = document.createElement('span');
 	//but now we use the data instead
 	let randomText = data[0];
-	
-	
-	
-	//set the text as content
-	let botText = document.createTextNode( randomText );
+	// get the time
+	let today = new Date();
+	let time = ('0' + today.getHours()).slice(-2) + ":" + ('0' + today.getMinutes()).slice(-2);
+	//set the text as conten
+	let botText = document.createTextNode(randomText);
+	//set the time text and style
+	span.appendChild(document.createTextNode(time));
+	span.style.fontSize = '10px';
+	span.style.fontColor = '#666666';
+	//date
+	botPost.appendChild(span);
+	// line break 
+	botPost.appendChild(document.createElement("br"));
 	// add that text to the P tag
-	botPost.appendChild( botText );
+	botPost.appendChild(botText);
 	// give the P tag a class for the bot
-	botPost.classList.add( "botPost" );
-	
+	botPost.classList.add("botPost");
 	// get the chatWindow and add the Post to it
-	document.getElementById( "chatWindow" ).appendChild( botPost );
-
-  
+	document.getElementById("chatWindow").appendChild(botPost);
 }
-
-
-
-
-
-

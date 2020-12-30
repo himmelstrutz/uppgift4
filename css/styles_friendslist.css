@@ -1,7 +1,6 @@
 /* Styles for Smells Like Team Spirit © 2020 */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +10,12 @@ html, body {
   font-family: "Roboto";
   background-color: #FFF9F8;
 }
+/* Style for profile name text to the right */
 
-#localdata{
-  margin-right:11px !important;
-  margin-left:11px !important;
-
-  }
+#localdata {
+  margin-right: 11px !important;
+  margin-left: 11px !important;
+}
 /* Chat page*/
 
 #logo {
@@ -25,14 +24,12 @@ html, body {
   margin-right: auto;
   width: 60%;
 }
-
 #option_button, #addClass, #addClass2, #addClass3, #addClass4, #addClass5, #addClass6 {
   background-color: #A6B579;
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 25px;
 }
-
 .row-striped:nth-of-type(odd) {
   background-color: #efefef;
   border-left: 4px #9B8080 solid;
@@ -84,17 +81,14 @@ html, body {
 .nav-link:hover {
   color: #000000 !important;
 }
-
 .nav-link:active {
   color: #000000 !important;
 }
-
 .navbar {
-    -webkit-box-shadow: 0 5px 6px -6px #999;
-    -moz-box-shadow: 0 5px 6px -6px #999;
-    box-shadow: 0 5px 6px -6px #999;
+  -webkit-box-shadow: 0 5px 6px -6px #999;
+  -moz-box-shadow: 0 5px 6px -6px #999;
+  box-shadow: 0 5px 6px -6px #999;
 }
-
 .card {
   border: 1px solid #A6B579;
   background-color: #f2eeee;
@@ -173,7 +167,7 @@ html, body {
 }
 .popup-box-on {
   display: block !important;
-  z-index:1000;
+  z-index: 1000;
 }
 .popup-box .popup-head {
   background-color: #fff;
@@ -226,7 +220,6 @@ html, body {
   padding: 5px !important;
   border: medium none;
   width: 95% !important;
-
 }
 .popup-messages-footer {
   background: #fff none repeat scroll 0 0;
@@ -430,114 +423,100 @@ html, body {
   padding: 5px 10px;
   position: relative;
 }
-
 /* Newer styles */
 
-#chatbox{
-        background: #FFFFFFF none repeat scroll 0 0;
-    height: 380px; 
-    overflow: auto;
-
-    
-    
+#chatbox {
+  background: #FFFFFFF none repeat scroll 0 0;
+  height: 380px;
+  overflow: auto;
 }
-
-#chatWindow{
-        background: #FFFFFF;
-    height: 380px; 
-    overflow: auto;
-       position: relative; 
-    
-     
+#chatWindow {
+  background: #FFFFFF;
+  height: 380px;
+  overflow: auto;
+  position: relative;
 }
+/* Style for 'typing text' message*/
 
-#typingText{
-  position: -webkit-sticky; /* Safari */
-  position: sticky; 
-  bottom: 0; 
+#typingText {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  bottom: 0;
   left: 0;
   font-style: italic;
-  display:none;
-  margin-left:7px;
+  display: none;
+  margin-left: 7px;
   z-index: 1000;
 }
+/* Style for  animated gif*/
 
-#typingImg{
-  
-  display:none;
-  margin-left:7px;
+#typingImg {
+  display: none;
+  margin-left: 7px;
   z-index: 1000;
 }
+/* Style for  chat messages */
 
 p.userPost::after {
- content: '';
-  background:url('../img/GenericUser.png');
+  content: '';
+  background: url('../img/GenericUser.png');
   width: 24px;
   height: 24px;
-  background-size: 24px 24px; 
+  background-size: 24px 24px;
   background-repeat: no-repeat;
-  margin-right:-36px;
-   float: right;
+  margin-right: -36px;
+  float: right;
 }
-    
-    p.userPost {
-    width: 75%;
-    background: #FEFAE1 none repeat scroll 0 0;
-    border: 1px solid #FEFAE1;
-    border-radius: 15px;
-    color: #1f2121;
-    margin: 5px 31px 5px 5px;
-    padding: 5px 10px;
-    position: relative;
-    float: right;
+p.userPost {
+  content: '14:23';
+  width: 75%;
+  background: #FEFAE1 none repeat scroll 0 0;
+  border: 1px solid #FEFAE1;
+  border-radius: 15px;
+  color: #1f2121;
+  margin: 0 31px 5px 5px;
+  padding: 5px 10px;
+  position: relative;
+  float: right;
+  font-size: 14px;
+  line-height: 1.2;
+  word-wrap: break-word;
 }
 p.botPost::before {
- content: '';
-  background:url('../img/GenericUser2.png');
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  background-size: 24px 24px; 
-  background-repeat: no-repeat;
-  margin-left:-36px;
-}
-
-/*p.botPost:after{
   content: '';
-  background:url('../img/GenericUser2.png');
+  background: url('../img/GenericUser2.png');
   width: 24px;
   height: 24px;
   position: absolute;
-  background-size: 24px 24px; 
+  background-size: 24px 24px;
   background-repeat: no-repeat;
-}*/
-
+  margin-left: -36px;
+}
 p.botPost {
-    border: 1px solid #FEFAE1;
-    background: #A6B579 none repeat scroll 0 0;
-    width: 75%;
-    margin: 5px 0 5px 31px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    color:#FFFFFF;
-    float:left;
+  border: 1px solid #FEFAE1;
+  background: #A6B579 none repeat scroll 0 0;
+  width: 75%;
+  margin: 5px 0 5px 31px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #FFFFFF;
+  float: left;
+  font-size: 14px;
+  line-height: 1.2;
+  word-wrap: break-word;
 }
-
-p.botPost::after{
-  margin-left:28px;
+p.botPost::after {
+  margin-left: 28px;
 }
-
 p.botPost text {
-margin-left:28px;
-  }
-
-
-.input {
-    /*width: 250px;*/
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: 28px;
 }
-
+.input {
+  /*width: 250px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
 textarea {
   display: block;
   width: 100%;
@@ -546,9 +525,16 @@ textarea {
   min-height: 40px;
   line-height: 20px;
 }
-
-
-
+p.userPostDateId {
+  font-size: 10px;
+  text-align: right;
+  display: block;
+}
+#timeStamp {
+  font-size: 10px;
+  text-align: right;
+  margin-right: 7px;
+}
 /* End */
 
 /* font-awesome icons */
@@ -611,6 +597,37 @@ footer>div {
 }
 /* End */
 
+/* Style for placeholder in chat window */
+
+textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #123456;
+  font-style: italic;
+}
+textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #123456;
+  opacity: 1;
+  font-style: italic;
+}
+textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #123456;
+  opacity: 1;
+  font-style: italic;
+}
+textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #123456;
+  font-style: italic;
+}
+textarea:placeholder-shown {
+  /* Standard Pseudo-class */
+  color: #123456;
+  font-style: italic;
+}
+/* Media query */
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -619,55 +636,15 @@ footer>div {
     display: none;
   }
 }
-
 .mt-4, .my-4 {
-    margin-top: 100px !important;
-    text-align: center;
-    color:#7A7A7A ;
+  margin-top: 100px !important;
+  text-align: center;
+  color: #7A7A7A;
 }
-
 .navbar-wrapper {
   position: fixed;
   top: 0;
   right: 0;
-  left: 0; 
+  left: 0;
   z-index: 20;
 }
-
-/*#typingImg {
-display:none;
-content: '';
-  background:url('../img/tenor.gif');
-  width: 48px;
-  height: 31px;
-  position: absolute;
-  background-size: 48px 31px; 
-  background-repeat: no-repeat;
-  margin-left:-36px;
-
-}*/
-
-textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-color: #123456;
-font-style:italic;
-}
-textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-color: #123456;
-opacity: 1;
-font-style:italic;
-}
-textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-color: #123456;
-opacity: 1;
-font-style:italic;
-}
-textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-color: #123456;
-font-style:italic;
-}
-textarea:placeholder-shown { /* Standard Pseudo-class */
-color: #123456;
-font-style:italic;
-}
-
-
